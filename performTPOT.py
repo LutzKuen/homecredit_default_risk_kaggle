@@ -3,7 +3,7 @@ from AWSTools import createInstance
 cont = createInstance.controller('../settings_aws.conf')
 
 cont.createInstance()
-files = [ '../results/feature_matrix.csv',
+files = [ '../homecredit_results/feature_matrix.csv',
 'fullTPOT.py']
 cont.transferFilesToWorker(files)
 cont.execOnRemote('install_deps_tpot.sh')
